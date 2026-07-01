@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import Image from 'next/image';
 import { posts } from '../data/posts';
 
 
@@ -13,7 +14,7 @@ export default function SidebarBlog() {
             key={p.id}
             className="border rounded-lg overflow-hidden hover:shadow-md transition"
           >
-            <img src={p.image} alt={p.title} className="w-full h-32 object-cover" />
+            <Image src={p.image} alt={p.title} width={400} height={300} className="w-full h-32 object-cover" />
             <div className="p-3">
               <h4 className="text-sm font-medium text-gray-900 line-clamp-2">{p.title}</h4>
               <p className="text-xs text-gray-500 mt-1">{p.date}</p>

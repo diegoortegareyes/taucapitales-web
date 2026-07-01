@@ -124,7 +124,7 @@ export default function NavBar() {
               className={`${greatVibes.className} text-sky-600 text-xl md:text-2xl lg:text-3xl text-center md:text-right whitespace-pre-line max-w-2xl`}
             >
               {'El éxito no es definitivo, el fracaso no es fatal:\nlo que cuenta es el valor de continuar.(Winston Churchill)'}
-              <img src="/pluma.png" alt="Pluma" className="inline-block align-middle ml-3 h-5 w-5 object-contain" />
+              <Image src="/pluma.png" alt="Pluma" width={20} height={20} className="inline-block align-middle ml-3 h-5 w-5 object-contain" />
             </p>
           </div>
         </div>
@@ -182,7 +182,7 @@ export default function NavBar() {
           <div className="max-w-6xl mx-auto px-4 pb-3 -mt-1 flex justify-center">
             <p className={`${greatVibes.className} text-sky-700 text-xl text-center whitespace-pre-line max-w-xs`}>
               {'El éxito no es definitivo, el fracaso no es fatal:\nlo que cuenta es el valor de continuar.'}
-              <img src="/pluma.png" alt="Pluma" className="inline-block align-middle ml-2 h-5 w-5 object-contain" />
+              <Image src="/pluma.png" alt="Pluma" width={20} height={20} className="inline-block align-middle ml-2 h-5 w-5 object-contain" />
             </p>
           </div>
         </div>

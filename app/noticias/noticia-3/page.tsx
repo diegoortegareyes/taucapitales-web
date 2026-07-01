@@ -1,6 +1,7 @@
 // app/noticias/noticia-3/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Bladex debuta en la Bolsa de Santiago | Tau Servicios Empresas",
@@ -36,11 +37,12 @@ export default function Noticia3() {
 
         {/* Imagen controlada */}
         <figure className="rounded-2xl overflow-hidden ring-1 ring-sky-100 bg-gradient-to-br from-sky-50/50 to-white">
-          <img
+          <Image
             src="/noticia3.png"
             alt="Debut de Bladex en la Bolsa de Santiago"
+            width={1200}
+            height={630}
             className="w-full h-64 md:h-80 object-cover"
-            loading="lazy"
           />
           <figcaption className="px-4 py-2 text-xs text-sky-900/80">
             Bladex celebra su campanazo en la Bolsa de Santiago, consolidando su expansión regional.

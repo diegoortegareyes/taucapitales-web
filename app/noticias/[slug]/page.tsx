@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { noticias } from "../../../data/noticias";
 
@@ -63,11 +64,12 @@ export default function NoticiaPage({
         </p>
 
         <figure className="rounded-2xl overflow-hidden ring-1 ring-sky-100 bg-gradient-to-br from-sky-50/50 to-white">
-          <img
+          <Image
             src={noticia.image}
             alt={noticia.title}
+            width={1200}
+            height={630}
             className="w-full h-64 md:h-80 object-cover"
-            loading="lazy"
           />
         </figure>
 

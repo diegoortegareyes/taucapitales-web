@@ -1,6 +1,7 @@
 // app/noticias/noticia-1/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Nueva sociedad entre Anglo American y Codelco | Tau Servicios Empresas",
@@ -32,11 +33,12 @@ export default function Noticia1() {
 
         {/* Imagen */}
         <figure className="rounded-2xl overflow-hidden ring-1 ring-sky-100 bg-gradient-to-br from-sky-50/50 to-white">
-          <img
+          <Image
             src="/noticia1.png"
             alt="Los Bronces / Anglo American y Codelco"
+            width={1200}
+            height={630}
             className="w-full h-64 md:h-80 object-cover"
-            loading="lazy"
           />
           <figcaption className="px-4 py-2 text-xs text-sky-900/80">
             Distrito minero de Los Bronces: alianza público-privada estratégica para Chile.

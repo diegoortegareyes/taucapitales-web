@@ -1,6 +1,7 @@
 // app/noticias/noticia-2/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Pagos atrasados: 80% de PYMES afectadas | Tau Servicios Empresas",
@@ -32,11 +33,12 @@ export default function Noticia2() {
 
         {/* Imagen controlada */}
         <figure className="rounded-2xl overflow-hidden ring-1 ring-sky-100 bg-gradient-to-br from-sky-50/50 to-white">
-          <img
+          <Image
             src="/noticia2.png"
             alt="Pagos a PYMES y cumplimiento de la Ley de 30 días"
+            width={1200}
+            height={630}
             className="w-full h-64 md:h-80 object-cover"
-            loading="lazy"
           />
           <figcaption className="px-4 py-2 text-xs text-sky-900/80">
             Ley de Pago a 30 días: avances normativos con brechas persistentes en el cumplimiento real.

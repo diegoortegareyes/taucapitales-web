@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { noticias } from "../../data/noticias";
 
 export const metadata: Metadata = {
@@ -37,11 +38,12 @@ export default function NoticiasPage() {
             key={n.slug}
             className="rounded-2xl border overflow-hidden bg-gradient-to-br from-sky-50 to-white ring-1 ring-sky-100 hover:shadow-md transition"
           >
-            <img
+            <Image
               src={n.image}
               alt={n.title}
+              width={400}
+              height={300}
               className="h-40 w-full object-cover"
-              loading="lazy"
             />
             <div className="p-4">
               <p className="text-xs uppercase tracking-wide text-sky-700/80 font-semibold">
