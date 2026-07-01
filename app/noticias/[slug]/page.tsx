@@ -17,12 +17,13 @@ export function generateStaticParams() {
     .map((n) => ({ slug: n.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const noticia = noticias.find((n) => n.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const noticia = noticias.find((n) => n.slug === slug);
   if (!noticia) return {};
 
   return {
@@ -42,12 +43,13 @@ export function generateMetadata({
   };
 }
 
-export default function NoticiaPage({
+export default async function NoticiaPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const noticia = noticias.find((n) => n.slug === params.slug && n.content);
+  const { slug } = await params;
+  const noticia = noticias.find((n) => n.slug === slug && n.content);
   if (!noticia) notFound();
 
   return (
