@@ -1,0 +1,29 @@
+# robots.txt para taucapitales.cl
+# Última actualización: 2025-09-26
+
+User-agent: *
+# Permite que los bots rastreen tu sitio
+Allow: /
+
+# Bloquea rutas internas o no públicas (ajústalas si no existen)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /preview/
+Disallow: /drafts/
+Disallow: /tmp/
+Disallow: /api/*
+
+# (Opcional) Si tienes páginas de búsqueda interna o filtros infinitos
+Disallow: /buscar/
+Disallow: /search/
+
+# (Opcional) Si usas generación de sitemaps por servidor
+Disallow: /server-sitemap.xml
+
+# (Opcional) Ejemplos de patrones: bloquea PDFs privados bajo una carpeta
+# Disallow: /docs-privados/*.pdf$
+
+# Sitemaps
+Sitemap: https://taucapitales.cl/sitemap.xml
